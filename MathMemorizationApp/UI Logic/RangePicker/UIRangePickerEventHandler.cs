@@ -12,10 +12,10 @@ namespace MathMemorizationApp.RangePicker
         private readonly UIRangePicker uIRangePicker;
         private readonly UIRangeValidator uIRangeValidator;
 
-        public UIRangePickerEventHandler(UIRangePicker uIRangePicker, UIRangeValidator uIRangeValidator)
+        public UIRangePickerEventHandler(UIRangePicker uIRangePicker)
         {
             this.uIRangePicker = uIRangePicker;
-            this.uIRangeValidator = uIRangeValidator;
+            uIRangeValidator = new UIRangeValidator(uIRangePicker);
 
             uIRangePicker.minPicker.SelectedIndexChanged += MinPicker_SelectedIndexChanged;
             uIRangePicker.maxPicker.SelectedIndexChanged += MaxPicker_SelectedIndexChanged;
