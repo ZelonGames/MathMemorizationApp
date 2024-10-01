@@ -8,6 +8,7 @@ namespace MathMemorizationApp.RangePicker
 {
     public class UIRangePickerEventHandler
     {
+        public event Action? ValidationCompleted;
         private readonly UIRangePicker uIRangePicker;
         private readonly UIRangeValidator uIRangeValidator;
 
@@ -25,6 +26,7 @@ namespace MathMemorizationApp.RangePicker
             uIRangePicker.maxPicker.SelectedIndexChanged -= MaxPicker_SelectedIndexChanged;
             uIRangeValidator.UpdateMaxPickerRange();
             uIRangePicker.maxPicker.SelectedIndexChanged += MaxPicker_SelectedIndexChanged;
+            ValidationCompleted?.Invoke();
         }
 
         private void MaxPicker_SelectedIndexChanged(object? sender, EventArgs e)
@@ -32,6 +34,7 @@ namespace MathMemorizationApp.RangePicker
             uIRangePicker.minPicker.SelectedIndexChanged -= MinPicker_SelectedIndexChanged;
             uIRangeValidator.UpdateMinPickerRange();
             uIRangePicker.minPicker.SelectedIndexChanged += MinPicker_SelectedIndexChanged;
+            ValidationCompleted?.Invoke();
         }
     }
 }

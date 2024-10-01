@@ -9,7 +9,8 @@ namespace MathMemorizationApp.RangePicker
 {
     public class UIRangePicker
     {
-        public readonly UIRangeValidator validator;
+        public readonly UIRangePickerEventHandler handler;
+        private readonly UIRangeValidator validator;
         public readonly Picker minPicker;
         public readonly Picker maxPicker;
         public readonly int range;
@@ -27,7 +28,7 @@ namespace MathMemorizationApp.RangePicker
             this.minPicker.SelectedIndex = 0;
 
             validator = new UIRangeValidator(this);
-            _ = new UIRangePickerEventHandler(this, validator);
+            handler = new UIRangePickerEventHandler(this, validator);
         }
 
         public int GetMinValue()

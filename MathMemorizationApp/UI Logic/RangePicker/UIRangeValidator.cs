@@ -11,7 +11,6 @@ namespace MathMemorizationApp.RangePicker
     /// </summary>
     public class UIRangeValidator(UIRangePicker uIRangePicker)
     {
-        public event Action? ValidationCompleted;
         private readonly UIRangePicker uIRangePicker = uIRangePicker;
 
         public void UpdateMaxPickerRange()
@@ -20,7 +19,6 @@ namespace MathMemorizationApp.RangePicker
             int maxPickerValue = uIRangePicker.GetMaxValue();
             uIRangePicker.maxPicker.ItemsSource = Enumerable.Range(minPickerValue, uIRangePicker.range).ToList();
             uIRangePicker.maxPicker.SelectedIndex = uIRangePicker.maxPicker.Items.IndexOf(maxPickerValue.ToString());
-            ValidationCompleted?.Invoke();
         }
 
         public void UpdateMinPickerRange()
@@ -29,7 +27,6 @@ namespace MathMemorizationApp.RangePicker
             int maxPickerValue = uIRangePicker.GetMaxValue();
             uIRangePicker.minPicker.ItemsSource = Enumerable.Range(1, maxPickerValue).ToList();
             uIRangePicker.minPicker.SelectedIndex = uIRangePicker.minPicker.Items.IndexOf(minPickerValue.ToString());
-            ValidationCompleted?.Invoke();
         }
     }
 }

@@ -24,10 +24,10 @@ namespace MathMemorizationApp
             pickerOperator.SelectedIndex = 0;
 
             leftNumberRange = new UIRangePicker(pickerMinNumberLeft, pickerMaxNumberLeft, 100);
-            leftNumberRange.validator.ValidationCompleted += PickerChanged;
+            leftNumberRange.handler.ValidationCompleted += PickerChanged;
             
             rightNumberRange = new UIRangePicker(pickerMinNumberRight, pickerMaxNumberRight, 100);
-            rightNumberRange.validator.ValidationCompleted += PickerChanged;
+            rightNumberRange.handler.ValidationCompleted += PickerChanged;
 
             numberGenerator = new NumberGenerator(
                 leftNumberRange.GetMinValue(), 
