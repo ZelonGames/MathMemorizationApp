@@ -22,7 +22,7 @@ namespace MathMemorizationApp.RangePicker
 
             this.maxPicker.ItemsSource = Enumerable.Range(1, range).ToArray();
             this.maxPicker.SelectedIndex = 9;
-
+            //t
             this.minPicker.ItemsSource = Enumerable.Range(1, maxPicker.SelectedIndex + 1).ToArray();
             this.minPicker.SelectedIndex = 0;
 
