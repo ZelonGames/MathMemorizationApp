@@ -9,17 +9,16 @@ namespace MathMemorizationApp.RangePicker
     /// <summary>
     /// Prevents the user from selecting an invalid range, eg min is higher than max
     /// </summary>
-    public class UIRangeValidator(UIRangePicker uIRangePicker, int range)
+    public class UIRangeValidator(UIRangePicker uIRangePicker)
     {
         public event Action? ValidationCompleted;
         private readonly UIRangePicker uIRangePicker = uIRangePicker;
-        private readonly int range = range;
 
         public void UpdateMaxPickerRange()
         {
             int minPickerValue = uIRangePicker.GetMinValue();
             int maxPickerValue = uIRangePicker.GetMaxValue();
-            uIRangePicker.maxPicker.ItemsSource = Enumerable.Range(minPickerValue, range).ToList();
+            uIRangePicker.maxPicker.ItemsSource = Enumerable.Range(minPickerValue, uIRangePicker.range).ToList();
             uIRangePicker.maxPicker.SelectedIndex = uIRangePicker.maxPicker.Items.IndexOf(maxPickerValue.ToString());
             ValidationCompleted?.Invoke();
         }
