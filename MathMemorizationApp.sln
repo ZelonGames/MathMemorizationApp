@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34525.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathMemorizationApp", "MathMemorizationApp\MathMemorizationApp.csproj", "{7072235D-62B7-4925-82BF-980727D9104A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|ARM32 = Debug|ARM32
+		Release|Any CPU = Release|Any CPU
+		Release|ARM32 = Release|ARM32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7072235D-62B7-4925-82BF-980727D9104A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7072235D-62B7-4925-82BF-980727D9104A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7072235D-62B7-4925-82BF-980727D9104A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{7072235D-62B7-4925-82BF-980727D9104A}.Debug|ARM32.ActiveCfg = Debug|Any CPU
+		{7072235D-62B7-4925-82BF-980727D9104A}.Debug|ARM32.Build.0 = Debug|Any CPU
+		{7072235D-62B7-4925-82BF-980727D9104A}.Debug|ARM32.Deploy.0 = Debug|Any CPU
+		{7072235D-62B7-4925-82BF-980727D9104A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7072235D-62B7-4925-82BF-980727D9104A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7072235D-62B7-4925-82BF-980727D9104A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{7072235D-62B7-4925-82BF-980727D9104A}.Release|ARM32.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD52B796-A5DF-4DF7-9B2C-D2B1806081EE}
+	EndGlobalSection
+EndGlobal

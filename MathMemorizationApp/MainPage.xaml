@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MathMemorizationApp.MainPage"
+             Shell.BackgroundColor="{StaticResource OffBlack}"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             BackgroundColor="{StaticResource OffBlack}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label x:Name="labelMath"
+               TextColor="White"
+               FontSize="50"
+               HorizontalOptions="Center"
+               Text="1+5=" 
+               Grid.Row="0" 
+               Grid.Column="0"
+               Grid.ColumnSpan="3"/>
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              Grid.ColumnSpan="3">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Picker x:Name="pickerOperator"
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Grid.ColumnSpan="2"
+                    BackgroundColor="{StaticResource Primary}"
+                    HorizontalTextAlignment="Center"
+                    TextColor="White"
+                    SelectedIndex="1">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Addition</x:String>
+                        <x:String>Subtraction</x:String>
+                        <x:String>Multiplication</x:String>
+                        <x:String>Division</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button x:Name="btnDel" 
+                    Text="Del" 
+                    Grid.Row="3" 
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Clicked="OnDelClicked"/>
+
+            <Picker x:Name="pickerMaxNumberRight"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    Title="Max Number Right"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    SelectedIndex="5">
+            </Picker>
+
+            <Picker x:Name="pickerMinNumberRight"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Title="Min Number Right"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    SelectedIndex="5">
+            </Picker>
+
+            <Picker x:Name="pickerMaxNumberLeft"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    Title="Max Number Left"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    SelectedIndex="5">
+            </Picker>
+
+            <Picker x:Name="pickerMinNumberLeft"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Title="Min Number Left"
+                    BackgroundColor="{StaticResource Primary}"
+                    TextColor="White"
+                    SelectedIndex="5">
+            </Picker>
+        </Grid>
+
+        <Button x:Name="numpad1"
+                Text="1"
+                Grid.Row="2"
+                Grid.Column="0"
+                Clicked="OnNumpadClicked"/>
+        <Button x:Name="numpad2"
+                Text="2"
+                Grid.Row="2"
+                Grid.Column="1"
+                Clicked="OnNumpadClicked"/>
+        <Button x:Name="numpad3"
+                Text="3"
+                Grid.Row="2"
+                Grid.Column="2"
+                Clicked="OnNumpadClicked"/>
+
+        <Button x:Name="numpad4"
+                Text="4"
+                Grid.Row="3"
+                Grid.Column="0"
+                Clicked="OnNumpadClicked"/>
+        <Button x:Name="numpad5"
+                Text="5"
+                Grid.Row="3"
+                Grid.Column="1"
+                Clicked="OnNumpadClicked"/>
+        <Button x:Name="numpad6"
+                Text="6"
+                Grid.Row="3"
+                Grid.Column="2"
+                Clicked="OnNumpadClicked"/>
+
+        <Button x:Name="numpad7"
+                Text="7"
+                Grid.Row="4"
+                Grid.Column="0"
+                Clicked="OnNumpadClicked"/>
+        <Button x:Name="numpad8"
+                Text="8"
+                Grid.Row="4"
+                Grid.Column="1"
+                Clicked="OnNumpadClicked"/>
+        <Button x:Name="numpad9"
+                Text="9"
+                Grid.Row="4"
+                Grid.Column="2"
+                Clicked="OnNumpadClicked"/>
+
+        <Button x:Name="numpad0"
+                Text="0"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Clicked="OnNumpadClicked"/>
+    </Grid>
+
+</ContentPage>
